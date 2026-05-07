@@ -1,0 +1,136 @@
+:root {
+  --bg: #0f172a;
+  --card-bg: #1e293b;
+  --accent: #38bdf8;
+  --text: #f1f5f9;
+  --muted-text: #94a3b8;
+  --border: #334155;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.muted {
+  display: block;
+  color: var(--muted-text);
+  font-size: 0.875rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.title {
+  margin: 0 0 16px 0;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--accent);
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+
+
+.btn {
+  border-radius: 999px;
+  padding: 10px 16px;
+  color: var(--btnText);
+  background: var(--hot);
+}
+
+.btn.alt {
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--ink);
+  background: var(--field);
+}
+
+@media (max-width: 720px) {
+  .app {
+    padding: 28px 18px;
+  }
+}
+
+:root {
+  --bg: #121212;
+  --ink: #e0e0e0;
+  --hot: #bb84ff;
+  --muted: #07ffe6;
+  --grid-bg: #1f1f1f;
+  --grid-border: #333;
+  --card: #2b1b14;
+  --field: #2b1b14;
+  --btnText: #1b120f;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: end;
+}
+
+.screen {
+  min-height: 260px;
+  border: 10px solid #f4b942;
+  border-radius: 10px;
+  padding: 26px;
+  background: radial-gradient(circle at top, #543018, #130c09);
+}
+
+.poster {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+  border: 1px dashed var(--line);
+}
